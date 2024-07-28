@@ -5,7 +5,7 @@
 
 > Hide all crosshairs, melee, ranged or hands.
 
-[![No Crosshairs Showcase](./showcase.webp)](https://www.nexusmods.com/7daystodie/mods/5541)
+[![No Crosshairs Showcase](/documentation/showcase.webp)](https://www.nexusmods.com/7daystodie/mods/5541)
 
 [//]: # ([![No Crosshairs Showcase]&#40;https://raw.githubusercontent.com/rdok/7daystodie_mod_no_crosshair/main/documentation/no_crosshair_showcase.webp&#41;]&#40;https://www.nexusmods.com/7daystodie/mods/5541&#41;)
 
