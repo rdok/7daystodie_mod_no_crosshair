@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+	<Name value="NoCrosshair"/>
+	<DisplayName value="No Crosshair HUD"/>
+	<Author value="Rizarttt"/>
+	<Description value="Hide crosshair globally, melee, ranged, anything."/>
+	<Website value="https://www.nexusmods.com/7daystodie/mods/5541"/>
+	<Version value="1.0.0"/>
+</xml>
