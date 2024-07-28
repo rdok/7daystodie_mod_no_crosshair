@@ -4,7 +4,8 @@
 [url=https://github.com/rdok/7daystodie_mod_no_crosshair][img]https://img.shields.io/badge/GitHub-Repository-green?style=flat-square&logo=github[/img][/url]
 
 [quote]
-Hide all crosshairs, melee, ranged or hands.
+[b]Hide All Crosshairs:[/b] Hides all crosshairs, whether for melee, ranged, or unarmed combat.  
+[b]EAC Caveat:[/b] This mod uses custom code that is not compatible with Easy Anti-Cheat (EAC). Attempting to use the mod with EAC enabled will result in an in-game warning prompt, requiring you to restart the game with EAC disabled.
 [/quote]
 [url=https://www.nexusmods.com/7daystodie/mods/5541][img]https://raw.githubusercontent.com/rdok/7daystodie_no_crosshair/main/documentation/showcase.webp[/img][/url]
 
