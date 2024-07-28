@@ -1,0 +1,70 @@
+[size=6]7 Days to Die Mod - No Crosshair[/size]
+
+[url=https://www.nexusmods.com/7daystodie/mods/5541][img]https://img.shields.io/badge/Nexus%20Mod-No%20Crosshair%20-orange?style=flat-square&logo=spinrilla[/img][/url]
+[url=https://github.com/rdok/7daystodie_mod_no_crosshair][img]https://img.shields.io/badge/GitHub-Repository-green?style=flat-square&logo=github[/img][/url]
+
+[quote]
+Hide all crosshairs, melee, ranged or hands.
+[/quote]
+[url=https://www.nexusmods.com/7daystodie/mods/5541][img]./showcase.webp[/img][/url]
+
+[list]
+[*] 7daystodie Version: 1.0 (b333)
+[*] Install with [url=https://www.nexusmods.com/about/vortex/]Vortex[/url].
+[/list]
+[size=5]Features[/size]
+[list]
+[*] Hide all crosshairs, melee, ranged or hands.
+[/list]
+[size=4]Modding Sources[/size]
+[list]
+[*] [url=https://github.com/SphereII/SphereII.Mods/blob/f1216d54eb3f812037ef090bf116bfd8c66eee17/Mods/SphereII%20Clear%20UI/Harmony/ClearUI.cs#L181]Removing crosshair by SphereII[/url]
+[*] [url=https://github.com/SphereII/SphereII.Mods/tree/master/Mods/SampleProject]DLL Sample Project by SphereII[/url]
+[*] [url=https://www.nexusmods.com/7daystodie/mods/870]AGF - V1.0 - HUD PLUS[/url] for a mod template
+[*] [url=https://7daystodie.fandom.com/wiki/Basic_Modding_Tutorial_1]Basic_Modding_Tutorial_1[/url] to confirm the required mod fields.
+[/list]
+[size=5]Development Environment[/size]
+[list=1]
+[*] [b]Setup Visual Studio 2022[/b]
+[list]
+[*] Ensure Visual Studio 2022 is installed with .NET Framework 4.8.
+[*] Open the [b]NoCrosshair.sln[/b] file in Visual Studio.
+[/list]
+[*] [b]Project Configuration[/b]
+[list]
+[*] Right-click on the project and select "Properties."
+[*] Go to the "Build" section and select the "Debug" configuration.
+[*] Scroll down to the "Output" section and fix the output path to the location where your mods are loaded.
+[*] This location is specified by [b]UserDataFolder[/b] in the [b]%appdata%\7DaysToDie\launchersettings.json[/b] file.
+[*] Configure this using [b]7dLauncher.exe[/b] and add the following in the "Additional parameters" field: [b]-UserDataFolder=C:\vortex_udf_7_days_to_die[/b].
+[/list][/list]
+[size=4]References (Libraries)[/size]
+
+To build the DLL in Visual Studio, you need the following references. These libraries are also useful for checking the definitions of various game functions.
+
+[list]
+[*] [b]Fixing Library Paths[/b]:
+[list]
+[*] Due to potential mismatches between different development machines, the reference paths might be broken.
+[*] In the Solution Explorer, expand the "References" section.
+[*] Right-click on each reference and update the path in the properties window.
+[/list]
+[*] [b]Required References[/b]:
+[list]
+[*] [b]7DaysToDie_Data\Managed\Assembly-CSharp.dll[/b] (e.g., to import [b]IModApi[/b], [b]Mod[/b]).
+[*] [b]Mods\0_TFP_Harmony\0Harmony.dll[/b] (for importing [b]HarmonyLib[/b]).
+[*] [b]7DaysToDie_Data\Managed\LogLibrary.dll[/b] (for logging).
+[/list][/list]
+[size=4]Release[/size]
+
+To build and zip the mod, follow these steps using NodeJS 20:
+
+[list=1]
+[*] [b]Install NodeJS 20[/b]: [url=https://github.com/coreybutler/nvm-windows]Download NodeJS 20[/url]
+[*] [b]Build the Mod[/b]:
+[code]
+   npm ci
+   npm run build # generates the mod in zip format
+   npm run generate_readme # generates markdown and bbcode for NexusMods
+[/code]
+[/list]
