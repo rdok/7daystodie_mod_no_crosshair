@@ -1,5 +1,4 @@
 ﻿using HarmonyLib;
-using System.Reflection;
 
 public class NoCrosshair
 {
@@ -7,19 +6,19 @@ public class NoCrosshair
     {
         public void InitMod(Mod _modInstance)
         {
-            Log.Out(" Loading Patch: " + GetType());
-            var harmony = new HarmonyLib.Harmony(GetType().ToString());
-            harmony.PatchAll(Assembly.GetExecutingAssembly());
+            Log.Out("Loading Patch: " + GetType());
+            var harmony = new Harmony(GetType().ToString());
+            harmony.PatchAll();
         }
     }
 
-    [HarmonyPatch(typeof(ItemClass))]
-    [HarmonyPatch("GetCrosshairType")]
-    public class NoCrosshair_ItemClass_Crosshair
+    [HarmonyPatch(typeof(NGuiWdwInGameHUD), "Start")]
+    public static class StartPatch
     {
-        private static ItemClass.EnumCrosshairType Postfix(ItemClass.EnumCrosshairType __result)
+        public static void Postfix(NGuiWdwInGameHUD nGuiWdwInGameHUD)
         {
-            return ItemClass.EnumCrosshairType.None;
+            nGuiWdwInGameHUD.showCrosshair = false;
         }
     }
 }
+
