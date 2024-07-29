@@ -21,5 +21,6 @@
 
 - [Removing crosshair by SphereII](https://github.com/SphereII/SphereII.Mods/blob/f1216d54eb3f812037ef090bf116bfd8c66eee17/Mods/SphereII%20Clear%20UI/Harmony/ClearUI.cs#L181)
 - [DLL Sample Project by SphereII](https://github.com/SphereII/SphereII.Mods/tree/master/Mods/SampleProject)
+- [A more simplified code version by Danzo38](https://www.nexusmods.com/Core/Libs/Common/Widgets/DownloadPopUp?id=19362&nmm=1&game_id=1059)
 - [AGF - V1.0 - HUD PLUS](https://www.nexusmods.com/7daystodie/mods/870) for a mod template
 - [Basic_Modding_Tutorial_1](https://7daystodie.fandom.com/wiki/Basic_Modding_Tutorial_1) to confirm the required mod fields.
